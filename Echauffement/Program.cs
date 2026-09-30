@@ -1,4 +1,6 @@
-﻿namespace Echauffement;
+﻿using System.ComponentModel.Design;
+
+namespace Echauffement;
 
 class Program
 {
@@ -7,15 +9,25 @@ class Program
         /*
          * Consigne générale : faites un commit entre chaque étape !
          */
-        
+
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
-        
+        Console.WriteLine("My name is Alba and my favorite game is Ocarina of Time!");
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
-        
+        Console.WriteLine("What's your name and how old are you?");
+        string nom = Console.ReadLine();
+        int age = Convert.ToInt32(Console.ReadLine());
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
-        
+        if (age >= 18)
+        {
+            Console.WriteLine("Tu es majeur");
+        }
+        else
+        {
+            Console.WriteLine("Tu es mineur, dégage");
+        }
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
-        
+        Console.WriteLine("How much money do you have?");
+        int money = Convert.ToInt32(Console.ReadLine());
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
         
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
